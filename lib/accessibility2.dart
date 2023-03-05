@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'accessibility2.dart';
 
-class AccessibilityCheck extends StatefulWidget {
-  const AccessibilityCheck({Key? key}) : super(key: key);
+class AccessibilitySettings extends StatefulWidget {
+  const AccessibilitySettings({Key? key}) : super(key: key);
 
   @override
-  _AccessibilityCheck createState() => _AccessibilityCheck();
+  _AccessibilitySettings createState() => _AccessibilitySettings();
 }
 
-class _AccessibilityCheck extends State<AccessibilityCheck> {
+class _AccessibilitySettings extends State<AccessibilitySettings> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,10 +48,10 @@ class _AccessibilityCheck extends State<AccessibilityCheck> {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 100),
+                      padding: const EdgeInsets.only(top: 20, left: 45),
                       child: SizedBox(
-                        width: 100,
-                        height: 50,
+                        width: 150,
+                        height: 150,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -62,16 +61,16 @@ class _AccessibilityCheck extends State<AccessibilityCheck> {
                           },
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: const Color(0xFF4CC082),
+                            backgroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
                           ),
                           child: const Text(
-                            'YES',
+                            'Contrast',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
@@ -82,29 +81,43 @@ class _AccessibilityCheck extends State<AccessibilityCheck> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20, left: 20),
                       child: SizedBox(
-                        width: 100,
-                        height: 50,
+                        width: 150,
+                        height: 150,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: const Color(0xFF101249),
+                            backgroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
                           ),
-                          child: const Text(
-                            'NO',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Image(
+                                image: AssetImage('assets/TextSize.png'),
+                                width: 30,
+                                height: 30,
+                              ),
+                              Text(
+                                'Text Size',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                    ),
+                    )
+
                   ],
                 ),
 
