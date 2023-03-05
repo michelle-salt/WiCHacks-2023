@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'accessibility1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -138,9 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: const EdgeInsets.only(top: 40.0),
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     child: const Text(
-                      'LOGIN',
+                      'LOG IN',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -160,7 +160,58 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-
+                const Padding(
+                  padding: EdgeInsets.only(top: 40),
+                  child: Text(
+                    'Not Registered?',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 5.0),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white, backgroundColor: const Color(0xFF6E8EFF),
+                      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    child: const Text(
+                      'SIGN UP',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 60),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AccessibilityCheck()),
+                      );
+                    },
+                    child: const Text(
+                      'SKIP FOR NOW',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
 
               ],
             ),
