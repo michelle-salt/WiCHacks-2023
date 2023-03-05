@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'accessibility1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -195,7 +196,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: const EdgeInsets.only(top: 60),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AccessibilityCheck()),
+                      );
+                    },
                     child: const Text(
                       'SKIP FOR NOW',
                       style: TextStyle(
@@ -206,6 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+
               ],
             ),
           ],
