@@ -93,13 +93,13 @@ class _AccessibilitySettings extends State<AccessibilitySettings> {
                               borderRadius: BorderRadius.circular(30),
                             ),
                           ),
-                          child: Row(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Image(
                                 image: AssetImage('assets/TextSize.png'),
-                                width: 30,
-                                height: 30,
+                                width: 50,
+                                height: 50,
                               ),
                               Text(
                                 'Text Size',
@@ -109,14 +109,12 @@ class _AccessibilitySettings extends State<AccessibilitySettings> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(
-                                width: 10,
-                              ),
                             ],
                           ),
                         ),
                       ),
-                    )
+                    ),
+
 
                   ],
                 ),
