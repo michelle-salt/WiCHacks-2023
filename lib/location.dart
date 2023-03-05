@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'prices.dart';
 
 class Location extends StatefulWidget {
   const Location({super.key});
@@ -78,7 +79,12 @@ class _Location extends State<Location> {
                 Padding(
                   padding: const EdgeInsets.only(top: 40.0),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Prices()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white, backgroundColor: const Color(0xFF4CC082),
                       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
