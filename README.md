@@ -4,7 +4,7 @@
 
 ## Creators (Alphabetically)
 - [Anshika Gupta](https://www.linkedin.com/in/anshikagupta08/)
-- [Maryellen Marino]()
+- [Maryellen Marino](https://www.linkedin.com/in/maryellen-marino)
 - [Michelle Saltoun]()
 - [Selena Zhang]()
 
