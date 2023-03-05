@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'location.dart';
 
 class AccessibilitySettings extends StatefulWidget {
   const AccessibilitySettings({Key? key}) : super(key: key);
@@ -276,7 +277,12 @@ class _AccessibilitySettings extends State<AccessibilitySettings> {
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Location()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white, backgroundColor: const Color(0xFF4CC082),
                       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
