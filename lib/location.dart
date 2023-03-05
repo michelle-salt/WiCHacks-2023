@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'prices.dart';
 
+TextEditingController myController = TextEditingController();
+
 class Location extends StatefulWidget {
   const Location({super.key});
 
@@ -58,8 +60,9 @@ class _Location extends State<Location> {
                         color: const Color(0xFF101249),
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      child: const TextField(
-                        decoration: InputDecoration.collapsed(
+                      child: TextField(
+                        controller: myController, // assign the controller to the TextField
+                        decoration: const InputDecoration.collapsed(
                           hintText: 'Enter Zip Code',
                           hintStyle: TextStyle(
                             fontSize: 24,
@@ -67,7 +70,7 @@ class _Location extends State<Location> {
                             color: Colors.grey,
                           ),
                         ),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,

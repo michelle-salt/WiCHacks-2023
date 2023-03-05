@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+TextEditingController myController2 = TextEditingController();
+
 class Prices extends StatefulWidget {
   const Prices({super.key});
 
@@ -85,8 +87,9 @@ class _Prices extends State<Prices> {
                         color: const Color(0xFF101249),
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      child: const TextField(
-                        decoration: InputDecoration.collapsed(
+                      child: TextField(
+                        controller: myController2,
+                        decoration: const InputDecoration.collapsed(
                           hintText: 'Search Item',
                           hintStyle: TextStyle(
                             fontSize: 24,
@@ -94,7 +97,7 @@ class _Prices extends State<Prices> {
                             color: Colors.grey,
                           ),
                         ),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
