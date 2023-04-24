@@ -6,7 +6,7 @@
 - [Anshika Gupta](https://www.linkedin.com/in/anshikagupta08/)
 - [Maryellen Marino](https://www.linkedin.com/in/maryellen-marino)
 - [Michelle Saltoun]()
-- [Selena Zhang]()
+- [Selena Zhang](https://www.linkedin.com/in/selenazhang-/)
 
 ## Inspiration
 
